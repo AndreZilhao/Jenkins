@@ -13,9 +13,9 @@ pipeline {
                 script {
                 	env.NUMBER_OF_ISSUES = 10
                 	sh "echo '$NUMBER_OF_ISSUES'"
-					}
-                }
+				}
             }
         }
     }
 }
+

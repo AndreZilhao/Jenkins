@@ -4,6 +4,18 @@ pipeline {
 			image 'alpine:latest' 
 		}
 	}
+	environment {
+	    NUMBER_OF_ISSUES = "0"
+	}
     stages {
+        stage('test') {
+            steps {
+                script {
+                	env.NUMBER_OF_ISSUES = 10
+                	sh "echo '$NUMBER_OF_ISSUES'"
+					}
+                }
+            }
+        }
     }
 }
